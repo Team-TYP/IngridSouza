@@ -109,7 +109,7 @@ nav a:hover {
 .quadrado_sobre_desc {
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
-    margin-bottom: 20px;
+    margin-top: -7px;
 }
 #geral {
     display: flex;
@@ -163,11 +163,23 @@ article .projeto_titulo:hover {
     color: #23cebd;
 }
 article .projeto_thumb {
-    margin-top: 30px;
+    margin-top: 20px;
 }
 article .projeto_thumb img {
     width: 100%;
     height: auto;
+}
+.projeto_thumb > .img_projeto1 {
+    width: 300px;
+}
+.projeto_thumb > .img_projeto2 {
+    width: 250px;
+}
+.projeto_thumb > .img_projeto3 {
+   width: 250px;
+}
+.projeto_thumb > .img_projeto4 {
+    width: 250px;
 }
 article .projeto_title {
     font-family: 'Rubik', sans-serif;
@@ -318,7 +330,7 @@ footer picture {
     .quadrado_sobre_desc {
         font-family: 'Poppins', sans-serif;
         font-size: 12px;
-        margin-bottom: 20px;
+        margin-top: 10px;
     }
     #geral section{
         padding: 60px;
