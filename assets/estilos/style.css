@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 body {
     background-color: rgba(0, 0, 0, 0.979);
@@ -15,7 +15,7 @@ body {
 header {
     display: flex;
     justify-content: center;
-    height: 80px;
+    height: 60px;
 }
 .container {
     display: flex;
@@ -25,6 +25,8 @@ header {
 .menu {
     display: flex;
     align-items: center;
+    margin: auto;
+    
 }
 nav ul, nav li {
  list-style: none;
@@ -36,17 +38,18 @@ nav ul {
 }
 nav a {
     display: block;
-    padding: 15px;
+    padding: 10px;
     text-decoration: none;
     text-decoration: uppercase;
     color: white;
     font-family: 'Rubik', sans-serif;
+    border-radius: 15px;
 }
-nav .active a, nav a:hover {
+nav a:hover {
     background-color: #3FA69B;;
     color: white;
 }
-#banner {
+#background {
     display: flex;
     justify-content: center;
     background-image: url("../imagens/espaco1.jpg");
@@ -57,13 +60,13 @@ nav .active a, nav a:hover {
 .column {
     flex-direction: column;
 }
-.banner_headline {
+.background_headline {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.banner_headline h1 {
+.background_headline h1 {
     font-family: 'Rubik', sans-serif;
     font-size: 60px;
     text-transform: uppercase;
@@ -71,40 +74,40 @@ nav .active a, nav a:hover {
      color: rgb(236, 236, 236);
      margin-bottom: 5px;
      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.83);
-     white-space: nowrap;
 }
-.banner_headline h2 {
+.background_headline h2 {
         margin-top: 2px;
-        margin-left: 15px;
+        margin-left: 100px;
         font-family: 'Rubik', sans-serif;
         color: rgba(226, 225, 225, 0.707);
         letter-spacing: 2px; 
         text-shadow: 1px 1px 1px rgba(14, 14, 14, 0.83);
         font-size: 1.9em;
 }
-.banner_options {
+.background_options {
     height: 100px;
     display: flex;
     width: 450px;
     margin: auto;
 }
-.banner1{
+.quadrado_sobre{
     flex: 1;
     color: white;
     padding: 10px;
     background-color: #3FA69B;;
 }
-.banner_title {
+.quadrado_sobre_title {
     font-size: 21px;
     font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 2px;
+    margin-top: -6px;
      color: rgb(236, 236, 236);
-     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.83);
      text-align: center;
 }
-.banner_desc {
+.quadrado_sobre_desc {
+    font-family: 'Poppins', sans-serif;
     font-size: 12px;
     margin-bottom: 20px;
 }
@@ -123,6 +126,7 @@ nav .active a, nav a:hover {
     margin-bottom: 20px;
 }
 .widget_title_text {
+    font-family: 'Rubik', sans-serif;
     color: white;
     font-size: 21px;
     font-weight: bold;
@@ -142,37 +146,46 @@ article {
     min-width: 300px;
     margin-right: 20px;
 }
-article .news_data {
+article .corpo_projetos {
     display: flex;
 }
-article .news_posted_at {
+article .projeto_titulo {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
     font-size: 15px;
     background-color: #3FA69B;;
     padding: 10px;
     margin-right: 2px;
+    border-radius: 15px;
 }
-article .news_thumb {
+article .projeto_titulo:hover {
+    background-color: #080808;
+    color: #23cebd;
+}
+article .projeto_thumb {
     margin-top: 30px;
 }
-article .news_thumb img {
+article .projeto_thumb img {
     width: 100%;
     height: auto;
 }
-article .news_title {
+article .projeto_title {
+    font-family: 'Rubik', sans-serif;
     margin-top: 25px;
     margin-bottom: 25px;
     color: white;
     font-size: 23px;
 }
-article .news_resume {
+article .projeto_resume {
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
-    color: #5c5c5c;
+    color: #909090;
     line-height: 20px;
     margin-bottom: 30px;
 }
-.news_resume a {
-    color: #5c5c5c;
+.projeto_resume a {
+    font-family: 'Poppins', sans-serif;
+    color: #909090;
 }
 article a {
     text-decoration: none;
@@ -188,9 +201,10 @@ article a {
     background-color: #3FA69B;
     margin: 10px;
     padding: 10px;
+    border-radius: 15px;
 }
 .quadrado div:hover {
-    background-color: blue;
+    background-color: black;
 }
 .bar {
     width: 350px;
@@ -201,10 +215,14 @@ article a {
 .contato {
     margin-top: 15px;
     color: white;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
 }
 .contato a {
     color: white;
     text-decoration: none;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
 }
 .contato a:hover {
     color: rgb(48, 91, 193);
@@ -215,8 +233,23 @@ article a {
     height:25px;
     margin-bottom: -10px;
 }
+#voltar_topo {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 35px;
+    height: 25px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background-color: #3FA69B;
+    color: white;
+}
 footer {
     background-color: black;
+    font-family: 'Rubik', sans-serif;
 }
 .footer_area {
     display: flex;
@@ -229,7 +262,7 @@ footer {
     display: flex;
     justify-content: center;
     line-height: 40px;
-    color: #5c5c5c;
+    color: #909090;
     font-size: 13px;
 }
 .footer_copy p {
@@ -251,44 +284,51 @@ footer picture {
     margin-top: 40px;
     margin-bottom: 40px;
     margin-right: 20px;
+    cursor: pointer;
 }
 .mm_line {
     height: 3px;
-    background-color: #3FA69B;;
+    background-color: white;;
 }
 @media  (max-width:600px) {
-    .banner_headline {
+    .background_headline {
         padding: 20px;
     }
-    .banner_headline h1{
-        font-size: 55px;
+    .background_headline h1{
+        font-size: 40px;
     }
-    .banner_headline h2 {
+    .background_headline h2 {
         font-size: 17px;
+        margin-left: 80px;
     }
-    .banner_options {
+    .background_options {
         height: auto;
         flex-direction: column;
     }
+    .quadrado_sobre_title {
+        font-size: 21px;
+        font-family: 'Rubik', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 2px;
+        margin-top: -6px;
+         color: rgb(236, 236, 236);
+         text-align: center;
+    }
+    .quadrado_sobre_desc {
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
     #geral section{
-        padding: 20px;
+        padding: 60px;
         padding-top: 80px;
     }
     #geral aside {
-        padding: 20px;
+        padding: 15px;
     }
     .container {
         flex-direction: column;
-    }
-    .footer_menu {
-        flex-direction: column;
-    }
-    .footer_area {
-        flex-direction: column;
-        padding: 20px;
-    }
-    .footer_copy {
-        padding-left: 20px;
     }
     header .container {
         flex-direction: row;
@@ -297,16 +337,37 @@ footer picture {
         flex-direction: column;
         display: none;
         position: absolute;
-        left: 0;
-        width: 100%;
-        background-color: white;
+        width: 100px;
+        border-radius: 20px;
+        right: 2px;
+        top: 65px;
+        background-color: black;
     }
     header {
         height: auto;
+        width: auto;
     }
     .menuMobile {
         display: flex;
         flex-direction: column;
+        position: absolute;
+        right: -10px;
+        top: -19px;
         justify-content: space-around;
     }
+    footer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    #contato_imagem {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        left: 190px;
+        width: 0px;
+        height: 0px;
+}
 }
