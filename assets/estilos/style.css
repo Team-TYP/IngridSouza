@@ -287,7 +287,8 @@ footer {
 }
 footer picture {
    position: absolute;
-   left: 570px;
+   right: 10px;
+   top: 13px;
 }
 .menuMobile {
     display: none;
@@ -372,6 +373,11 @@ footer picture {
         flex-direction: column;
         width: 100%;
         height: auto;
+    }
+    footer picture {
+        position: absolute;
+        top: 3155px;
+        margin: 5px;
     }
     #contato_imagem {
         display: flex;
