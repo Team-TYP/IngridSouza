@@ -320,7 +320,7 @@ footer picture {
     }
     .background_headline h2 {
         font-size: 17px;
-        margin-left: 80px;
+        margin-left: 50px;
     }
     .background_options {
         height: auto;
@@ -379,9 +379,9 @@ footer picture {
         height: auto;
     }
     footer picture {
-        position: absolute;
-        top: 2582px;
-        margin: 5px;
+        visibility: hidden;
+
+
     }
     #contato_imagem {
         display: flex;
