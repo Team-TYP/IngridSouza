@@ -1,13 +1,15 @@
-var btn = document.querySelector(".voltar_topo");
-btn.addEventListener("click", function() {
-    window.scrollTo(0, 0);
-});
-
-window.addEventListener("scroll", function(event)
-{
-    if (window.scrollY == 0) {
-        btn.classList.remove("visible");
+function subirTela() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+function botaoScroll() {
+    if(window.scrollY ===0) {
+        document.querySelector('.subir').style.display = 'none';
     } else {
-        btn.classList.add("visible");
+        document.querySelector('.subir').style.display = 'block';
     }
-});
+}
+
+window.addEventListener('scroll', botaoScroll);

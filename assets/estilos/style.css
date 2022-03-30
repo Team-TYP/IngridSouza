@@ -244,13 +244,10 @@ article a {
     height:25px;
     margin-bottom: -10px;
 }
-.voltar_topo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 15px;
-    width: 35px;
-    height: 25px;
+.subir {
+    border-radius: 20px;
+    width: 30px;
+    height: 20px;
     position: fixed;
     right: 10px;
     bottom: 10px;
@@ -258,10 +255,12 @@ article a {
     background-color: #3FA69B;
     color: white;
     cursor: pointer;
-    visibility: hidden;
+    display: none;
 }
-.voltar_topo.visible {
-    visibility: visible;
+.subir span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 footer {
     background-color: black;
