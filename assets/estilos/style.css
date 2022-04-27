@@ -52,7 +52,7 @@ nav a:hover {
 #background {
     display: flex;
     justify-content: center;
-    background-image: url("../imagens/espaco1.jpg");
+    background-image: url("../imagens/paisagem4.jpg");
     background-position: center;
     background-size: cover;
     height: 670px;
@@ -67,6 +67,7 @@ nav a:hover {
     justify-content: center;
 }
 .background_headline h1 {
+    margin-left: -15px;
     font-family: 'Rubik', sans-serif;
     font-size: 60px;
     text-transform: uppercase;
@@ -76,8 +77,8 @@ nav a:hover {
      text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.83);
 }
 .background_headline h2 {
-        margin-top: 2px;
-        margin-left: 65px;
+        margin-top: 1px;
+        margin-left: 4px;
         font-family: 'Rubik', sans-serif;
         color: rgba(226, 225, 225, 0.707);
         letter-spacing: 2px; 
@@ -93,7 +94,7 @@ nav a:hover {
 .quadrado_sobre{
     flex: 1;
     padding: 8px;
-    background-color: #3fa69cc3;
+    background-color: rgba(12, 12, 12, 0.765);
 }
 .quadrado_sobre_title {
     font-size: 21px;
@@ -118,7 +119,7 @@ nav a:hover {
     color: #e7e7e7;
 }
 .quadrado_sobre_desc a:hover {
-    color: #050505;
+    color: #3fa69cc3;
 }
 #geral {
     display: flex;
@@ -143,7 +144,7 @@ nav a:hover {
 .widget_title_bar {
     width: 50px;
     height: 2px;
-    background-color: #3FA69B;
+    background-color: #02c4b1;
     margin-top: 10px;
 }
 .widget_body {
@@ -168,7 +169,7 @@ article .projeto_titulo {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: white;
     font-size: 15px;
-    background-color: #3FA69B;;
+    background-color: rgb(49, 47, 47);
     padding: 10px;
     margin-right: 2px;
     border-radius: 15px;
@@ -185,16 +186,13 @@ article .projeto_thumb img {
     height: auto;
 }
 .projeto_thumb > .img_projeto1 {
-    width: 300px;
+    width: 250px;
 }
 .projeto_thumb > .img_projeto2 {
     width: 250px;
 }
 .projeto_thumb > .img_projeto3 {
    width: 250px;
-}
-.projeto_thumb > .img_projeto4 {
-    width: 250px;
 }
 article .projeto_title {
     font-family: 'Rubik', sans-serif;
@@ -316,6 +314,7 @@ footer picture {
     }
     .background_headline h1{
         font-size: 40px;
+        margin-left: 10px;
     }
     .background_headline h2 {
         font-size: 17px;
@@ -379,8 +378,6 @@ footer picture {
     }
     footer picture {
         visibility: hidden;
-
-
     }
     #contato_imagem {
         display: flex;
