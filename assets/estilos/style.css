@@ -194,19 +194,13 @@ article .projeto_thumb img {
 .projeto_thumb > .img_projeto3 {
    width: 250px;
 }
-article .projeto_title {
-    font-family: 'Rubik', sans-serif;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    color: white;
-    font-size: 23px;
-}
 article .projeto_resume {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     color: #909090;
     line-height: 20px;
     margin-bottom: 30px;
+    width: 250px;
 }
 .projeto_resume a {
     font-family: 'Poppins', sans-serif;
@@ -234,7 +228,7 @@ article a {
     font-family: 'Poppins', sans-serif;
 }
 .contato a:hover {
-    color: rgb(48, 91, 193);
+    color: #02c4b1;
     text-decoration: underline;
 }
 .imagens_contato {
