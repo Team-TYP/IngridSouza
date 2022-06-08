@@ -12,6 +12,11 @@ header {
     justify-content: center;
     height: 60px;
 }
+/* ANIMAÇÕES */
+.animation {
+    transition: 2.3s;
+    transform: rotate(360deg);
+}
 .container {
     display: flex;
     justify-content: space-between;
@@ -43,6 +48,7 @@ nav a {
 nav a:hover {
     background-color: #3FA69B;;
     color: white;
+    transition: 0.5s ease-in-out;
 }
 #background {
     display: flex;
@@ -69,7 +75,6 @@ nav a:hover {
     letter-spacing: 2px;
      color: rgb(236, 236, 236);
      margin-bottom: 5px;
-     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.83);
 }
 .background_headline h2 {
         margin-top: 1px;
@@ -77,7 +82,6 @@ nav a:hover {
         font-family: 'Rubik', sans-serif;
         color: rgba(226, 225, 225, 0.707);
         letter-spacing: 2px; 
-        text-shadow: 1px 1px 1px rgba(14, 14, 14, 0.83);
         font-size: 1.9em;
 }
 .background_options {
@@ -115,6 +119,7 @@ nav a:hover {
 }
 .quadrado_sobre_desc a:hover {
     color: #3fa69cc3;
+    transition: 0.5s ease-in-out;
 }
 #geral {
     display: flex;
@@ -226,6 +231,7 @@ article a {
 .contato a:hover {
     color: #02c4b1;
     text-decoration: underline;
+    transition: 0.5s ease-in-out;
 }
 .imagens_contato {
     width: 25px;
@@ -279,6 +285,7 @@ footer {
 }
 .footer_copy a:hover {
     color: #35cfbf;
+    transition: 0.5s ease-in-out;
 }
 footer picture {
    position: absolute;
