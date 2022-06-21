@@ -1,6 +1,7 @@
 @charset "UTF-8";
 * {
     box-sizing: border-box;
+    transition: 1.2s;
 }
 /* ALGUNS PADRÕES */
 body {
@@ -19,21 +20,44 @@ body {
 #geral {
     display: flex;
     justify-content: center;
-}
-#projetos {
-    flex: 2;
-}
-#contato {
-    flex: 1;
+    align-items: center;
 }
 .flex {
     display: flex;
     flex-wrap: wrap;
 }
-/* ANIMAÇÕES */
-.animation {
-    transition: 2.3s;
-    transform: rotate(360deg);
+/* MENU RESPONSIVO */
+.menuMobile {
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.mm_line {
+    height: 3px;
+    background-color: white;;
+}
+/*BOTÃO DE SUBIR TELA */
+.subir {
+    border-radius: 20px;
+    width: 30px;
+    height: 20px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 3;
+    background-color: #3FA69B;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+.subir span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* CABEÇALHO E MENU */
 .header {
@@ -74,7 +98,7 @@ body {
     display: flex;
     justify-content: center;
     background-image: url("../imagens/paisagem4.jpg");
-    background-position: center;
+    background-position: bottom;
     background-size: cover;
     height: 670px;
 }
@@ -87,7 +111,7 @@ body {
 .titulo-principal {
     margin-left: -15px;
     font-family: 'Rubik', sans-serif;
-    font-size: 60px;
+    font-size: 3.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
      color: rgb(236, 236, 236);
@@ -114,12 +138,8 @@ body {
     background-color: rgba(12, 12, 12, 0.765);
     color: #e7e7e7;
 }
-.quadrado_sobre:hover {
-    color: #080808;
-    transition: 1.8s;
-}
 .titulo-sobre {
-    font-size: 21px;
+    font-size: 1.5rem;
     font-weight: 600;
     font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
@@ -130,9 +150,47 @@ body {
 }
 .descricao {
     font-family: 'Rubik', sans-serif;
-    font-size: 14px;
+    color: #f4f4f4;
+    font-size: .9rem;
     margin-top: 0px;
     font-weight: normal;
+}
+/* SECTION SKILLS */
+.skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.skills_quadrado {
+    display: flex;
+}
+.titulo_skills {
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 10px
+}
+.quadrado {
+    padding: 10px;
+    margin-left: 20px;
+    display: flex;
+    align-items: flex-end;
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    background-color: #0e0d0d;
+}
+.quadrado:hover {
+    transform: scale(1.5);
+}
+.quadrado_titulo {
+    font-family: 'Rubik', sans-serif;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
 }
 /* SECTION DOS PROJETOS/CONTATO */
 .widget_title {
@@ -161,8 +219,6 @@ body {
 /*SECTION PROJETOS */
 .projetos-descricao {
     flex: 1;
-    min-width: 300px;
-    margin-right: 20px;
 }
 .corpo_projetos {
     display: flex;
@@ -171,22 +227,42 @@ body {
     font-family: 'Poppins', sans-serif;
     color: white;
     font-size: 15px;
-    background-color: rgb(49, 47, 47);
-    padding: 10px;
-    margin-right: 2px;
-    border-radius: 15px;
-    margin-bottom: 10px;
+    margin: 10px 0;
 }
 .projeto_titulo:hover {
     background-color: #080808;
     color: #23cebd;
 }
+.btn {
+    padding: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.btn1 {
+    background-color: #02c4b15f;
+    color: white;
+}
+.btn2 {
+    background-color: #3FA69B;
+    color: white;
+}
+.btn1:hover {
+    background-color: #02c4b1;
+}
+.btn2:hover {
+    background-color: #02c4b15f;
+}
 .projeto_thumb {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .projeto_thumb img {
-    width: 100%;
-    height: auto;
+    border-radius: 5px;
+}
+.projeto_thumb.analogico {
+    margin-top: 30px;
+}
+.projeto_thumb.netflix {
+    margin-top: -15px;
 }
 .projeto_thumb > .img_projeto1 {
     width: 250px;
@@ -204,66 +280,55 @@ body {
     color: #909090;
     line-height: 20px;
     margin-bottom: 30px;
-    width: 250px;
-}
-.projeto_resume a {
-    font-family: 'Rubik', sans-serif;
-    color: #909090;
-}
-.projetos-descricao a {
-    text-decoration: none;
 }
 .projetos-descricao:hover {
     transform: scale(1.06);
 }
-/*ASIDE CONTATO */
-.widget-titulo{
-    font-family: 'Rubik', sans-serif;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 10px 0;
-}
-.contato {
-    margin-top: 16px;
-    color: white;
-    font-size: 16px;
-    font-family: 'Rubik', sans-serif;
-}
-.links {
-    color: #59b5f3d0;
-    text-decoration: none;
-    font-size: 14px;
-    font-family: 'Rubik', sans-serif;
-}
-.links:hover {
-    color: #e7e7e7;
-    text-decoration: underline;
-    transition: 0.5s ease-in-out;
-}
-.imagens_contato {
-    width: 25px;
-    height:25px;
-    margin-bottom: -10px;
-}
-/*BOTÃO DE SUBIR TELA */
-.subir {
-    border-radius: 20px;
-    width: 30px;
-    height: 20px;
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    z-index: 3;
-    background-color: #3FA69B;
-    color: white;
-    cursor: pointer;
-    display: none;
-}
-.subir span {
+/* FORMULARIO */
+.formulario {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 50px 0;
+}
+.descricao_form {
+    margin-top: -9px;
+    color: #ccc;
+    font-weight: 100;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+}
+.input {
+    border: none;
+    border-radius: 3px;
+    width: 100%;
+    margin: 15px 0;
+    height: 40px;
+}
+.input.mensagem {
+    height: 80px;
+}
+.btn_contato {
+    border: none;
+    border-radius: 5px;
+    background-color: #02c4b1;
+    width: 100%;
+    height: 50px;
+    color: #fff;
+    cursor: pointer;
+}
+.btn_contato:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid #02c4b1;
+}
+/*Mensagens erro*/
+.input-container--invalido {
+    color: red;
 }
 /* RODAPÉ */
 footer {
@@ -301,18 +366,4 @@ footer picture {
    position: absolute;
    right: 10px;
    top: 13px;
-}
-/* MENU RESPONSIVO */
-.menuMobile {
-    display: none;
-    width: 40px;
-    height: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 20px;
-    cursor: pointer;
-}
-.mm_line {
-    height: 3px;
-    background-color: white;;
 }
