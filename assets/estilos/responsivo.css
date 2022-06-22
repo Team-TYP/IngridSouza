@@ -1,0 +1,131 @@
+@media screen and (min-width: 0) {
+    .container {
+        width: auto;
+    }
+    .menu-lista {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        width: 100px;
+        border-radius: 20px;
+        right: 2px;
+        top: 65px;
+        background-color: black;
+    }
+    .menuMobile {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: -10px;
+        top: -19px;
+        justify-content: space-around;
+    }
+    .titulo-principal {
+        font-size: 1.6rem;
+    }
+    .subtitulo {
+        font-size: .6rem;
+    }
+    .descricao {
+        width: auto;
+        font-size: 14px;
+    }
+    .sobre {
+        width: auto;
+    }
+    .skills_quadrado {
+        flex-direction: column;
+        align-items: center;
+    }
+    .quadrado {
+        margin-bottom: 20px;
+    }
+    .widget {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .projetos_body {
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+    }
+    .contato_textos_form {
+        width: auto;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .descricao_form {
+        width: 250px;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 768px) {
+    .menu-lista { 
+        display: flex;
+        flex-direction: row;
+        position: unset;
+        width: 100%;
+    }
+    .menuMobile {
+        display: none;
+    }
+    .titulo-principal {
+        font-size: 3.2rem;
+    }
+    .subtitulo {
+        font-size: 1.5rem;
+    }
+    .sobre {
+        width: 450px;
+    }
+    .skills_quadrado {
+        flex-direction: row;
+    }
+    .projetos_body {
+        flex-direction: row;
+        width: 600px;
+        flex-wrap: wrap;
+    }
+    .projeto_resume {
+        width: 300px;
+        font-size: 12px;
+    }
+    .imagens_projeto {
+        width: 70%;
+    }
+    .contato_textos_form {
+        width: 100%;
+    }
+    .descricao_form {
+        width: 100%;
+    }
+    .input {
+        width: 500px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .menu-lista { 
+        display: flex;
+        flex-direction: row;
+        position: unset;
+        width: 100%;
+    }
+    .menuMobile {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .menu-lista { 
+        display: flex;
+        flex-direction: row;
+        position: unset;
+        width: 100%;
+    }
+    .menuMobile {
+        display: none;
+    }
+}

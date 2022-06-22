@@ -1,82 +1,34 @@
 @charset "UTF-8";
 * {
     box-sizing: border-box;
-    transition: 1.2s;
+    transition: 1.2s ease-in-out;
 }
 /* ALGUNS PADRÕES */
 body {
-    background-color: rgba(0, 0, 0, 0.979);
+    background-color: #000000fa;
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100vh;
 }
 .container {
     display: flex;
-    justify-content: space-between;
-    width: 990px;
-}
-.column {
     flex-direction: column;
-}
-#geral {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-}
-/* MENU RESPONSIVO */
-.menuMobile {
-    display: none;
-    width: 40px;
-    height: 40px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 20px;
-    cursor: pointer;
-}
-.mm_line {
-    height: 3px;
-    background-color: white;;
-}
-/*BOTÃO DE SUBIR TELA */
-.subir {
-    border-radius: 20px;
-    width: 30px;
-    height: 20px;
-    position: fixed;
-    right: 10px;
-    bottom: 10px;
-    z-index: 3;
-    background-color: #3FA69B;
-    color: white;
-    cursor: pointer;
-    display: none;
-}
-.subir span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 /* CABEÇALHO E MENU */
 .header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     height: 60px;
 }
 .menu {
-    display: flex;
-    align-items: center;
-    margin: auto;
+    margin-top: 10px;
 }
 .menu-lista { 
     display: flex;
 }
 .menu-lista, .menu-item {
  list-style: none;
- margin: 0;
- padding: 0;
 }
 .menu-link {
     display: block;
@@ -86,56 +38,49 @@ body {
     color: white;
     font-family: 'Rubik', sans-serif;
     font-weight: bold;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 .menu-link:hover {
     background-color: #3FA69B;;
     color: white;
-    transition: 0.5s ease-in-out;
 }
 /* SECTION DO BACKGROUND */
-#background {
+.background {
+    background: url('../imagens/paisagem4.jpg') center / cover;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
-    background-image: url("../imagens/paisagem4.jpg");
-    background-position: bottom;
-    background-size: cover;
-    height: 670px;
+    height: 400px;
+    width: 100%;
 }
-.background-textos {
-    flex: 1;
+.background_titulos {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: flex-start;
+    padding-left: 3rem;
 }
 .titulo-principal {
-    margin-left: -15px;
     font-family: 'Rubik', sans-serif;
-    font-size: 3.5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-     color: rgb(236, 236, 236);
+     color: #ececec;
      margin-bottom: 5px;
 }
 .subtitulo {
-        margin-top: 1px;
-        margin-left: 4px;
         font-family: 'Rubik', sans-serif;
-        color: rgba(226, 225, 225, 0.707);
+        color: #e2e1e1b4;
         letter-spacing: 2px; 
-        font-size: 1.9em;
-}
-.background_options {
-    height: 100px;
-    display: flex;
-    width: 450px;
-    margin: auto;
+        margin: 0 60px;
 }
 /*SECTION DO SOBRE MIM E DESCRIÇÃO */
+.sobre {
+    height: 100px;
+    width: 450px;
+    margin: 0 auto;
+}
 .quadrado_sobre{
-    flex: 1;
     padding: 8px;
-    background-color: rgba(12, 12, 12, 0.765);
+    background-color: #0c0c0cc3;
     color: #e7e7e7;
 }
 .titulo-sobre {
@@ -144,42 +89,41 @@ body {
     font-family: 'Rubik', sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 2px;
-    margin-top: -6px;
+    margin-bottom: 10px;
     text-align: center;
 }
 .descricao {
     font-family: 'Rubik', sans-serif;
     color: #f4f4f4;
     font-size: .9rem;
-    margin-top: 0px;
     font-weight: normal;
+    margin-top: 10px;
 }
 /* SECTION SKILLS */
-.skills {
+.sobre_skills {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
-    margin: 20px 0;
+    margin-bottom: 40px;
 }
 .skills_quadrado {
     display: flex;
 }
 .titulo_skills {
+    font-size: 1.5rem;
+    font-weight: 600;
     font-family: 'Rubik', sans-serif;
-    color: white;
-    font-size: 21px;
-    font-weight: bold;
-    margin-bottom: 10px
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #f4f4f4;
+    margin: 30px 0;
 }
 .quadrado {
     padding: 10px;
     margin-left: 20px;
-    display: flex;
-    align-items: flex-end;
     width: 100px;
-    height: 100px;
+    height: 70px;
     border-radius: 5px;
     background-color: #0e0d0d;
 }
@@ -192,17 +136,28 @@ body {
     font-weight: bold;
     color: white;
 }
-/* SECTION DOS PROJETOS/CONTATO */
+/* SECTION DOS PROJETOS */
 .widget_title {
     margin-top: 30px;
     margin-bottom: 20px;
 }
+.projetos_body {
+    display: flex;
+    width: 600px;
+    flex-wrap: wrap;
+}
+.section_projetos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .titulo-padrao {
+    font-size: 1.5rem;
+    font-weight: 600;
     font-family: 'Rubik', sans-serif;
-    color: white;
-    font-size: 21px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff; 
 }
 .widget_title_bar {
     width: 50px;
@@ -216,9 +171,9 @@ body {
     background-color: #3FA69B;
     margin-top: 15px;
 }
-/*SECTION PROJETOS */
-.projetos-descricao {
+.projetos_article {
     flex: 1;
+    margin-bottom: 40px;
 }
 .corpo_projetos {
     display: flex;
@@ -226,7 +181,7 @@ body {
 .projeto_titulo {
     font-family: 'Poppins', sans-serif;
     color: white;
-    font-size: 15px;
+    font-size: 1.2rem;
     margin: 10px 0;
 }
 .projeto_titulo:hover {
@@ -239,39 +194,30 @@ body {
     text-decoration: none;
 }
 .btn1 {
-    background-color: #02c4b15f;
-    color: white;
+    background-color: #02c4b1;
+    color: black;
 }
 .btn2 {
-    background-color: #3FA69B;
+    background-color: black;
     color: white;
+    border: 2px solid #02c4b1;
 }
 .btn1:hover {
-    background-color: #02c4b1;
+    background-color: black;
+    color: white;
+    border: 2px solid #02c4b1;
 }
 .btn2:hover {
-    background-color: #02c4b15f;
+    background-color: #02c4b1;
+    color: black;
 }
 .projeto_thumb {
     margin-top: 10px;
 }
-.projeto_thumb img {
+.imagens_projeto {
     border-radius: 5px;
-}
-.projeto_thumb.analogico {
-    margin-top: 30px;
-}
-.projeto_thumb.netflix {
-    margin-top: -15px;
-}
-.projeto_thumb > .img_projeto1 {
-    width: 250px;
-}
-.projeto_thumb > .img_projeto2 {
-    width: 250px;
-}
-.projeto_thumb > .img_projeto3 {
-   width: 250px;
+    height: 110px;
+    width: 100%;
 }
 .projeto_resume {
     font-family: 'Rubik', sans-serif;
@@ -280,9 +226,11 @@ body {
     color: #909090;
     line-height: 20px;
     margin-bottom: 30px;
+    width: 300px;
 }
-.projetos-descricao:hover {
-    transform: scale(1.06);
+.imagens_projeto:hover {
+    transform: scale(1.5);
+    margin: 20px;
 }
 /* FORMULARIO */
 .formulario {
@@ -292,11 +240,12 @@ body {
     margin: 50px 0;
 }
 .descricao_form {
-    margin-top: -9px;
     color: #ccc;
     font-weight: 100;
-    font-size: 13px;
+    font-size: .9rem;
     margin-bottom: 20px;
+    margin-top: 8px;
+    width: 450px;
 }
 .form {
     display: flex;
@@ -331,27 +280,17 @@ body {
     color: red;
 }
 /* RODAPÉ */
-footer {
-    background-color: black;
-}
-.footer_area {
-    display: flex;
-    justify-content: center;
-}
-.flexColumn {
-    flex-direction: column;
+.footer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
 }
 .footer_copy {
-    display: flex;
-    justify-content: center;
     line-height: 40px;
     color: #909090;
     font-size: 13px;
-}
-.footer_copy p {
     font-family: 'Poppins', sans-serif;
-   margin: 0;
-   padding: 0;
 }
 .footer_copy a {
     color: white;
@@ -360,10 +299,36 @@ footer {
 }
 .footer_copy a:hover {
     color: #35cfbf;
-    transition: 0.5s ease-in-out;
 }
-footer picture {
-   position: absolute;
-   right: 10px;
-   top: 13px;
+/* MENU RESPONSIVO */
+.menuMobile {
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.mm_line {
+    height: 3px;
+    background-color: white;;
+}
+/*BOTÃO DE SUBIR TELA */
+.subir {
+    border-radius: 20px;
+    width: 30px;
+    height: 20px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 3;
+    background-color: #3FA69B;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+.subir span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -16,7 +16,7 @@
     <link rel="shortcut icon" href="assets/imagens/favicon.ico">
     <link rel="stylesheet" href="assets/estilos/reset.css">
     <link rel="stylesheet" href="assets/estilos/style.css">
-    <link rel="stylesheet" href="assets/estilos/mediaQuery.css">
+    <link rel="stylesheet" href="assets/estilos/responsivo.css">
     <!--LINKS DE FONTE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +26,7 @@
 </head>
 <body>
     <header class="header">
+        <a href="https://ingridssilveira.github.io/IngridSouza/"><img src="assets/imagens/favicon.ico" alt="icone das inciais I and S"></a>
         <div class="container">
             <div class="menu">
                 <nav>
@@ -44,13 +45,15 @@
             </div>
         </div>
     </header>
-        <section id="background">
-            <div class="container column">
-                <div class="background-textos">
-                    <h1 class="titulo-principal">Ingrid de Souza</h1>
-                    <h2 class="subtitulo">Desenvolvedora Front-End</h2>
-                </div>
-                <div class="background_options">
+        <section class="background container">
+            <div class="background_titulos">
+                <h1 class="titulo-principal">Ingrid de Souza</h1>
+                <h2 class="subtitulo">Desenvolvedora Front-End</h2>
+            </div>
+        </section>
+        <section class="sobre_skills">
+            <div class="container skills">
+                <div class="sobre">
                     <div class="quadrado_sobre">
                             <h3 class="titulo-sobre" id="sobre">Sobre</h3>
                         <p class="descricao">
@@ -58,54 +61,48 @@
                             e sou formada em Análise e Desenvolvimento de Sistemas,
                             meus conhecimentos são em HTML, CSS, JavaScript, Git e GitHub e eu trabalho com o IDE Visual Studio Code.
                         </p>
+                    </div>
                 </div>
-                </div>
-                <section class="skills">
-                    <div class="container skills">
-                        <h2 class="titulo_skills">Skills</h2>
-                        <div class="skills_quadrado">
-                            <div class="quadrado">
-                                <div class="quadrado_alinhado">
-                                    <img src="assets/imagens/html.png" alt="html 5">
-                                    <p class="quadrado_titulo">Html 5</p>
-                                </div>
-                            </div>
-                            <div class="quadrado">
-                                <div class="quadrado_alinhado">
-                                    <img src="assets/imagens/css.png" alt="css">
-                                    <p class="quadrado_titulo">CSS</p>
-                                </div>
-                            </div>
-                            <div class="quadrado">
-                                <div class="quadrado_alinhado">
-                                    <img src="assets/imagens/javascript.png" alt="javascript">
-                                    <p class="quadrado_titulo">Javascript</p>
-                                </div>
-                            </div>
+                <h3 class="titulo_skills">Skills</h3>
+                <div class="skills_quadrado">
+                    <div class="quadrado">
+                        <div class="quadrado_alinhado">
+                            <img src="assets/imagens/html.png" alt="html 5">
+                            <p class="quadrado_titulo">Html 5</p>
                         </div>
                     </div>
-                 </section>
+                    <div class="quadrado">
+                        <div class="quadrado_alinhado">
+                            <img src="assets/imagens/css.png" alt="css">
+                            <p class="quadrado_titulo">CSS</p>
+                        </div>
+                    </div>
+                    <div class="quadrado">
+                        <div class="quadrado_alinhado">
+                            <img src="assets/imagens/javascript.png" alt="javascript">
+                            <p class="quadrado_titulo">Javascript</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-        </section>
-     
-            <section id="geral">
-                <div class="container">
-                    <section id="projetos">
+         </section>
+            <section id="projetos" class="section_projetos container">
                         <div class="widget">
                             <div class="widget_title">
                                     <h4 class="titulo-padrao">Projetos</h4>
                                     <div class="widget_title_bar">
                                     </div>
                             </div>
-                                <div class="widget_body flex">
-                                    <article class="projetos-descricao">
+                                <div class="projetos_body">
+                                    <article class="projetos_article">
                                         <div class="projeto_thumb">
-                                             <img src="assets/imagens/decodificador.jpeg" class="img_projeto3"
+                                             <img src="assets/imagens/decodificador.jpeg" class="imagens_projeto"
                                              alt="imagens do site android">
                                          </div>
                                                 <h5 class="projeto_titulo">
                                                     Decodificador
+                                                    <div class="widget_title_bar">
+                                                    </div>
                                                 </h5>
                                                 <p class="projeto_resume">
                                                     Decodificador de textos
@@ -113,13 +110,15 @@
                                                 <a class="btn btn1" target="_blank" href="#">Repositório</a>
                                                 <a class="btn btn2" target="_blank" href="https://ingridssilveira.github.io/Challenge-Oracle-ONE/">Ver demo</a>
                                     </article>
-                                    <article class="projetos-descricao">
+                                    <article class="projetos_article">
                                         <div class="projeto_thumb netflix">
-                                             <img src="assets/imagens/netflix.jpg" class="img_projeto3"
+                                             <img src="assets/imagens/netflix.jpg" class="imagens_projeto"
                                              alt="imagens do site android">
                                          </div>
                                                 <h5 class="projeto_titulo">
                                                     Netflix
+                                                    <div class="widget_title_bar">
+                                                    </div>
                                                 </h5>
                                                 <p class="projeto_resume">
                                                    Site clone da netflix
@@ -127,12 +126,14 @@
                                                 <a class="btn btn1" target="_blank" href="#">Repositório</a>
                                                 <a class="btn btn2" target="_blank" href="https://ingridssilveira.github.io/netflix/">Ver demo</a>
                                     </article>
-                                    <article class="projetos-descricao">
+                                    <article class="projetos_article">
                                         <div class="projeto_thumb">
-                                             <img src="assets/imagens/calculadora.jpeg" class="img_projeto1" alt="imagens do desafio frontendmentor">
+                                             <img src="assets/imagens/calculadora.jpeg" class="imagens_projeto" alt="imagens do desafio frontendmentor">
                                          </div>
                                                 <h5 class="projeto_titulo">
                                                     Calculadora
+                                                    <div class="widget_title_bar">
+                                                    </div>
                                                 </h5>
                                                 <p class="projeto_resume">
                                                     Este é um projeto de uma calculadora.
@@ -140,28 +141,30 @@
                                                 <a class="btn btn1" target="_blank" href="#">Repositório</a>
                                                 <a class="btn btn2" target="_blank" href="https://ingridssilveira.github.io/calculator/">Ver demo</a>
                                     </article>
-                                     <article class="projetos-descricao">
-                                        <div class="projeto_thumb analogico">
-                                                    <img src="assets/imagens/clock.png" class="img_projeto2" alt="imagens do site medicenter">
+                                    <article class="projetos_article">
+                                        <div class="projeto_thumb">
+                                             <img src="assets/imagens/clock.png" class="imagens_projeto analogico" alt="imagens do desafio frontendmentor">
                                          </div>
                                                 <h5 class="projeto_titulo">
-                                                    Relógio Analógico
+                                                    Relógio analógico
+                                                    <div class="widget_title_bar">
+                                                    </div>
                                                 </h5>
                                                 <p class="projeto_resume">
-                                                    Este é um projeto de um relógio analógico.
+                                                    Este é um projeto de uma relógio analógico.
                                                 </p>
                                                 <a class="btn btn1" target="_blank" href="#">Repositório</a>
                                                 <a class="btn btn2" target="_blank" href="https://ingridssilveira.github.io/Clock/">Ver demo</a>
                                     </article>
                                 </div>
-                    </section>
-                </div>
             </section>
-            <section id="contato" class="formulario">
+            <section id="contato" class="formulario container">
                         <div class="contato_textos_form">
                             <h2 class="titulo-padrao">Contato</h2>
+                            <div class="widget_title_bar">
+                            </div>
                             <p class="descricao">Quer entar em contato comigo?</p>
-                            <p class="descricao">Preencha o formulário ao lado e entrarei em contato o mais rápido possível.</p>
+                            <p class="descricao_form">Preencha o formulário ao lado e entrarei em contato o mais rápido possível.</p>
                             <form id="form" action="https://api.staticforms.xyz/submit" method="POST" class="form">
                                 <input type="hidden" name="accessKey" value="276987cd-09d2-478e-b968-0b76c74b811c">
                                 <input type="hidden" name="redirectTo" value="https://ingridssilveira.github.io/IngridSouza/">
@@ -191,11 +194,10 @@
                         </div>
             </section>
             <div class="subir" onclick="subirTela()"><span>&#9650;</span></div>
-    <footer>
+    <footer class="footer">
         <div class="footer_copy">
             <p>&copy; Copyright - by <a target="_blank" href="ttps://github.com/IngridsSilveira">Ingrid de Souza 🔥</a></p>
         </div>
-        <div class="container flexColumn">
             <div class="footer_area">
                     <picture id="contato_imagem">
                         <a href="mailto:ingridsouzaok@gmail.com?subject" target="_blank"><img src="assets/imagens/email-logo.png" alt="Icone do E-mail"></a>
@@ -208,7 +210,6 @@
 
                             <a href="https://api.whatsapp.com/send?phone=552179661084" target="_blank"><img src="assets/imagens/whatsapp-logo.png" alt="Icone do WhatsApp"></a> 
                     </picture>
-                </div>
             </div>
     </footer>
     <script src="assets/js/app.js" type="module"></script>
