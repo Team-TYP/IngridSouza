@@ -60,6 +60,10 @@
         width: 250px;
         text-align: center;
     }
+    .input,
+    .btn_contato {
+        width: 100%;
+    }
 }
 @media screen and (min-width: 768px) {
     .menu-lista { 
@@ -95,13 +99,12 @@
     .imagens_projeto {
         width: 70%;
     }
-    .contato_textos_form {
-        width: 100%;
-    }
     .descricao_form {
-        width: 100%;
+        width: 450px;
+        text-align: center;
     }
-    .input {
+    .input,
+    .btn_contato {
         width: 500px;
     }
 }
@@ -127,5 +130,9 @@
     }
     .menuMobile {
         display: none;
+    }
+    .input,
+    .btn_contato {
+        width: 50vw;
     }
 }

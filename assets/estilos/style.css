@@ -1,6 +1,8 @@
 @charset "UTF-8";
 * {
     box-sizing: border-box;
+}
+*:hover {
     transition: 1.2s ease-in-out;
 }
 /* ALGUNS PADRÕES */
@@ -94,7 +96,7 @@ body {
 }
 .descricao {
     font-family: 'Rubik', sans-serif;
-    color: #f4f4f4;
+    color: #ccc;
     font-size: .9rem;
     font-weight: normal;
     margin-top: 10px;
@@ -234,10 +236,11 @@ body {
 }
 /* FORMULARIO */
 .formulario {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 50px 0;
+}
+.input-container {
+    display: flex;
+    flex-direction: column;
 }
 .descricao_form {
     color: #ccc;
@@ -245,18 +248,25 @@ body {
     font-size: .9rem;
     margin-bottom: 20px;
     margin-top: 8px;
-    width: 450px;
 }
 .form {
     display: flex;
     flex-direction: column;
 }
+.input_label {
+    font-family: 'Rubik', sans-serif;
+    color: #f4f4f4;
+    font-size: 1rem;
+    font-weight: bold;
+}
 .input {
-    border: none;
+    border: 2px solid #02c4b1;
     border-radius: 3px;
-    width: 100%;
     margin: 15px 0;
     height: 40px;
+}
+.input:hover {
+    border-color: red;
 }
 .input.mensagem {
     height: 80px;
@@ -265,10 +275,10 @@ body {
     border: none;
     border-radius: 5px;
     background-color: #02c4b1;
-    width: 100%;
     height: 50px;
     color: #fff;
     cursor: pointer;
+    margin-top: 20px;
 }
 .btn_contato:hover {
     background-color: black;
@@ -277,6 +287,7 @@ body {
 }
 /*Mensagens erro*/
 .input-container--invalido {
+    margin: 20px 0;
     color: red;
 }
 /* RODAPÉ */
