@@ -24,3 +24,6 @@ window.onload = function() {
                 }
             });
         };
+
+// animação scroll
+
